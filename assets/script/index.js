@@ -25,5 +25,7 @@ the css must be there already
 
 */
 
+import { select } from './utils.js';
 
 console.log(movies)
+console.log(select)
