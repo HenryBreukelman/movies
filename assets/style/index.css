@@ -1,7 +1,50 @@
 @charset "utf-8";
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Utility Classes                                      */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.spacebetween {
+    justify-content: space-between;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+body {
+    font-family: 'Nunito', sans-serif, Arial, sans-serif;
+}
+
+/*
+    Header
+*/
+
+
+
+/*
+    Content
+*/
+
+
+
+/*
+@charset "utf-8";
+
+ Utility Classes  
+
 .flex {
     display: flex;
   }
@@ -19,9 +62,9 @@
     gap: 2rem;
   }
   
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-  /*  Base                                                 */
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+   Base                                                 
+
   
   :root {
     --app-background-dark: rgb(24, 23, 32);
@@ -47,9 +90,9 @@
   h1, h2, p {
     color: #fff;
   }
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-  /*  Component                                            */
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+    Component                                            
+
   form {
     width: 520px;
   }
@@ -108,12 +151,12 @@
     background-color: #0070df;
   }
   
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-  /*  Component                                            */
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+    Component                                           
+
   
   .poster-wrapper {
-    /* grow, shrink, basis */
+     grow, shrink, basis 
     flex: 0 0 auto;
   
     img {
@@ -150,3 +193,4 @@
       border-radius: 50px;
     }
   }
+*/
