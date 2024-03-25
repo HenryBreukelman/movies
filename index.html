@@ -22,8 +22,46 @@
         <script src="./assets/script/index.js" type="module"></script>
     </head>
     <body>
-        <main>
-            <p>hi</p>
-        </main>        
-    </body>
+        <main class="flex">
+          <section>
+            <div class="container">
+              <form class="flex gap-1">
+                <div class="search-bar">
+                  <input class="movie-search-input" type="text" placeholder="Search">
+                  <div class="matched-movies-wrapper">
+                    <ul></ul>
+                  </div>
+                </div> 
+                <div class="button-wrapper">
+                  <input class="find-button" type="button" value="Find Movie">
+                </div>
+              </form> 
+              
+              <div class="movie-information-container flex gap-2">
+                <div class="poster-wrapper">
+                  <figure>
+                    <img src="https://raw.githubusercontent.com/mrspecht/media/main/img/the-matrix.jpg" alt="">
+                  </figure>
+                </div>
+                <div class="information-container">
+                  <div class="information">
+                    <h2>The Matrix</h2>
+                    <p class="release-duration"><span>1997</span> | <span>2h 16m</span></p>
+                    <p class="description">When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth - the life he knows is the elaborate deception of an evil cyber-intelligence.</p>
+                    <p class="genres flex">
+                      <span>Action</span>
+                      <span>Sci-fi</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            
+    
+            
+          </section>
+          
+        </main>
+      </body>
 </html>
