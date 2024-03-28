@@ -1,9 +1,22 @@
+@charset "utf-8";
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Utility Classes                                      */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
 .flex {
   display: flex;
+}
+
+.spacebetween {
+  justify-content: space-between;
 }
 
 .center {
@@ -11,25 +24,20 @@
   place-items: center;
 }
 
-.gap-1 {
-  gap: 1rem;
+body {
+  font-family: 'Nunito', sans-serif, Arial, sans-serif;
 }
 
-.gap-2 {
-  gap: 2rem;
+.gap {
+  gap: 10px;
 }
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Base                                                 */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
-:root {
-  --app-background-dark: rgb(24, 23, 32);
-  --border-radius: 5px;
-}
+/*
+  Content
+*/
 
 body {
-  background-color: var(--app-background-dark);
+  background-color: #181720;
   font-family: 'Noto Sans', 'Open Sans', arial, sans-serif;
 }
 
@@ -58,12 +66,14 @@ h1, h2, p {
 .visible {
   visibility: visible;
 }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Search section                                       */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/* Search section */
+
+
 h1 {
-  font-size: 4rem;
-  margin-bottom: 1.2rem;
+  font-size: 38px;
+  margin-bottom: 10px;
 }
 
 form {
@@ -75,13 +85,12 @@ form {
 }
 
 .movie-search-input, .matched-movies-wrapper, .find-button {
-  border-radius: var(--border-radius);
+  border-radius: 5px;
 }
 
 .movie-search-input {
   background-color: rgb(255 255 255 / 0.05);
-  border: 1px solid rgb(255 255 255 / 0.1);
-  padding: 0 1rem;
+  padding: 0 10px;
   color: #fff;
   height: 45px;
 }
@@ -89,12 +98,12 @@ form {
 .matched-movies-wrapper {
   background-color: #fff;
   cursor: pointer;
-  color: var(--app-background-dark);
+  color: #181720;
 }
 
 div ul li {
-  padding: 0 1rem;
-  transition: background-color 0.15s ease-in-out;
+  padding: 0 1px;
+  transition: all 0.15s ease-in-out;
 }
 
 div ul li:hover {
@@ -116,10 +125,10 @@ div ul li:hover {
   background-color: #007bff;
   color: #fff;
   text-transform: uppercase;
-  transition: background-color 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   width: 125px;
   height: 45px;
-  font-size: 1.5rem;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -131,49 +140,48 @@ div ul li:hover {
   background-color: #0070df;
 }
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Movie Information                                    */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Movie Information */
+
 .movie-information-container {
   margin-top: 50px;
   height: 275px;
 }
 
 .poster-wrapper {
-  /* grow, shrink, basis */
   flex: 0 0 auto;
+}
 
-  img {
-    height: 265px;
-  }
+.poster-wrapper img {
+  height: 265px;
 }
 
 .information-container {
   flex: 1;
-
-  h2 {
-    font-weight: 500;
-    font-size: 2.7rem;
-  }
-
-  .release-duration, .genres {
-    color: rgba(255, 255, 255, 0.55);
-    font-weight: 500;
-  }
-
-  .description {
-    margin-top: 20px;
-  }
-
-  .genres {
-    gap: 0.8rem;
-    margin-top: 30px;
-  }
-
-  .genres span {
-    padding: 3px 15px;
-    background-color: rgb(255 255 255 / 0.05);
-    border: 0.5px solid rgb(255 255 255 / 0.15);
-    border-radius: 50px;
-  }
 }
+
+.information-container h2 {
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.release-duration, .genres {
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.genres {
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.genres span {
+  padding: 3px 15px;
+  background-color: rgb(255 255 255 / 0.05);
+  border: 0.5px solid rgb(255 255 255 / 0.15);
+  border-radius: 50px;
+}
+
