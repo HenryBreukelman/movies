@@ -133,11 +133,8 @@ div ul li:hover {
 }
 
 .find-button:hover {
-  background-color: #0072ed;
-}
-
-.find-button:active {
-  background-color: #0070df;
+  background-color: #fff;
+  color: #007bff;
 }
 
 /* Movie Information */
