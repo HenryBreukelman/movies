@@ -41,7 +41,7 @@ function listMovies(input) {
     })
     
   } else {
-    moviesDisplay.innerHTML = '<li>Movie not found</li>'
+    moviesDisplay.innerHTML = '<li>Movie not found</li>';
   }
 }
 
