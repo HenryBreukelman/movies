@@ -26,6 +26,7 @@
 
 body {
   font-family: 'Nunito', sans-serif, Arial, sans-serif;
+  background-color: #181720;
 }
 
 .gap {
@@ -35,11 +36,6 @@ body {
 /*
   Content
 */
-
-body {
-  background-color: #181720;
-  font-family: 'Noto Sans', 'Open Sans', arial, sans-serif;
-}
 
 .container {
   width: min(100% - 30px, 940px);
