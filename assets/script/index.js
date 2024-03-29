@@ -4,16 +4,13 @@
 import * as utils from './utils.js';
 import movies from './movies.js';
 
-
-
 // Selectors
 
-const searchInput = utils.select('.movie-search-input');
-const matchedMoviesDisplay = utils.select('.matched-movies-wrapper ul');
+const searchInput = utils.select('.movie-input');
+const moviesDisplay = utils.select('.matched-movies ul');
 const findButton = utils.select('.find-button');
-const movieContainer = utils.select('.movie-information-container');
+const movieContainer = utils.select('.movie-info');
 const form = utils.select('form'); 
-
 
 // Search Suggestions
 
@@ -28,11 +25,11 @@ function searchMovies(searchTerm) {
 
 function listMovies(input) {
   if (input.length < 3) {
-    matchedMoviesDisplay.innerHTML = '';
+    moviesDisplay.innerHTML = '';
     return;
   }
 
-  matchedMoviesDisplay.innerHTML = '';
+  moviesDisplay.innerHTML = '';
   const occurences = searchMovies(input);
 
   if (occurences.length > 0) {
@@ -40,18 +37,18 @@ function listMovies(input) {
       const newLi = document.createElement('li');
       newLi.textContent = occurence;
       copyToInputOnClick(newLi);
-      matchedMoviesDisplay.appendChild(newLi);
+      moviesDisplay.appendChild(newLi);
     })
     
   } else {
-    matchedMoviesDisplay.innerHTML = '<li>Movie not found</li>'
+    moviesDisplay.innerHTML = '<li>Movie not found</li>'
   }
 }
 
 function copyToInputOnClick(element) {
   utils.listen('click', element, () => {
     searchInput.value = element.textContent;
-    matchedMoviesDisplay.innerHTML = '';
+    moviesDisplay.innerHTML = '';
   });
 }
 
@@ -71,8 +68,8 @@ function getMovie() {
       <img src="${movieFound.poster}" alt="${movieFound.title}">
     </figure>
   </div>
-  <div class="information-container">
-    <div class="information">
+  <div class="info-container">
+    <div class="info">
       <h2>${movieFound.title}</h2>
       <p class="release-duration">
         <span>${movieFound.year}</span> | <span>${movieFound.runningTime}</span>
@@ -88,7 +85,6 @@ function getMovie() {
   movieContainer.innerHTML = movieDetailsHTML;
   movieContainer.classList.remove('hidden');
 }
-
 
 // Event listeners
 
